@@ -44,6 +44,17 @@ public class Menu {
         } while(choice != 5);
     }
 
+    public static void ManageSubjectSubMenu() {
+
+        int choice;
+        do {
+            RenderStudentSubMenu();
+            System.out.println("Informe uma opção do Menu: ");
+            choice = Utils.inputInt();
+            ChoiceSubjectSubMenu(choice);
+        } while(choice != 5);
+    }
+
     public static void ChoiceStudentSubMenu(int choice) {
         switch (choice) {
             case 1:
@@ -60,6 +71,24 @@ public class Menu {
                 break;
         }
     }
+
+    public static void ChoiceSubjectSubMenu(int choice) {
+        switch (choice) {
+            case 1:
+                StudentDAO.Register();
+                break;
+            case 2:
+                StudentDAO.Read();
+                break;
+            case 3:
+                StudentDAO.Remove();
+                break;
+            case 4:
+                StudentDAO.Update();
+                break;
+        }
+    }
+    
     public static void RenderStudentSubMenu() {
         System.out.println("Submenu Aluno:");
         System.out.println("=======================");
@@ -67,6 +96,17 @@ public class Menu {
         System.out.println("2-Consultar ALUNO");
         System.out.println("3-Remover ALUNO");
         System.out.println("4-Atualizar ALUNO");
+        System.out.println("5-Voltar ao MENU INICIAL");
+        System.out.println("=======================");
+    }
+
+    public static void RenderSubjectSubMenu() {
+        System.out.println("Submenu Disciplinas:");
+        System.out.println("=======================");
+        System.out.println("1-Cadastrar DISCIPLINA");
+        System.out.println("2-Consultar DISCIPLINA");
+        System.out.println("3-Remover DISCIPLINA");
+        System.out.println("4-Atualizar DISCIPLINA");
         System.out.println("5-Voltar ao MENU INICIAL");
         System.out.println("=======================");
     }

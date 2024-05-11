@@ -97,7 +97,7 @@ public class StudentDAO {
                student.get().setCourse(course);
            }
 
-            student.get().atualizaAll(name, idade, cpf, course);
+            student.get().updateAll(name, idade, cpf, course);
         }
     }
 

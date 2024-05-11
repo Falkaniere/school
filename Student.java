@@ -69,7 +69,7 @@ public class Student {
         return id + " - " + name;
     }
 
-    public void atualizaAll(String name, int age, String cpf, String course) {
+    public void updateAll(String name, int age, String cpf, String course) {
         this.name = name;
         this.age = age;
         this.cpf = cpf;
